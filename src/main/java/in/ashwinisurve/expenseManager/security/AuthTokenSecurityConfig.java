@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -49,7 +50,7 @@ public class AuthTokenSecurityConfig extends WebSecurityConfigurerAdapter {
 				return authentication;
 			}
 		});
-		
+
 		httpSecurity.
 			antMatcher("/api/v1/**")
 			.antMatcher("api/v1/authenticateUser").authorizeRequests().and()
@@ -68,5 +69,4 @@ public class AuthTokenSecurityConfig extends WebSecurityConfigurerAdapter {
 					.anyRequest()
 					.authenticated();
 	}
-	
 }

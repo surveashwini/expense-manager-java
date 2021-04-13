@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import in.ashwinisurve.expenseManager.model.User;
 import in.ashwinisurve.expenseManager.service.UserService;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {

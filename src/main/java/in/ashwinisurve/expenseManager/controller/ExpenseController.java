@@ -23,7 +23,7 @@ import in.ashwinisurve.expenseManager.service.ExpenseService;
 import in.ashwinisurve.expenseManager.service.UserService;
 
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v1")
 public class ExpenseController {
